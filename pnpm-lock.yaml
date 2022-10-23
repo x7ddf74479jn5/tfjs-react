@@ -5,8 +5,11 @@ specifiers:
   '@tensorflow/tfjs': 4.0.0
   '@types/react': ^17.0.0
   '@types/react-dom': ^17.0.0
+  chart.js: 3.9.1
   react: ^17.0.0
+  react-chartjs-2: 4.3.1
   react-dom: ^17.0.0
+  react-loading: 2.0.3
   typescript: ^4.1.2
   vite: ^1.0.0-rc.13
   vite-plugin-react: ^4.0.0
@@ -14,8 +17,11 @@ specifiers:
 dependencies:
   '@tensorflow-models/toxicity': 1.2.2
   '@tensorflow/tfjs': 4.0.0
+  chart.js: 3.9.1
   react: 17.0.2
+  react-chartjs-2: 4.3.1_5vgmout2ofjcau3vzj5upbaj34
   react-dom: 17.0.2_react@17.0.2
+  react-loading: 2.0.3_react@17.0.2
 
 devDependencies:
   '@types/react': 17.0.50
@@ -913,6 +919,10 @@ packages:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
+
+  /chart.js/3.9.1:
+    resolution: {integrity: sha512-Ro2JbLmvg83gXF5F4sniaQ+lTbSv18E+TIf2cOeiH1Iqd2PGFOtem+DUufMZsCJwFE7ywPOpfXFBwRTGq7dh6w==}
+    dev: false
 
   /chokidar/3.5.3:
     resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
@@ -2008,6 +2018,16 @@ packages:
       safe-buffer: 5.2.1
     dev: true
 
+  /react-chartjs-2/4.3.1_5vgmout2ofjcau3vzj5upbaj34:
+    resolution: {integrity: sha512-5i3mjP6tU7QSn0jvb8I4hudTzHJqS8l00ORJnVwI2sYu0ihpj83Lv2YzfxunfxTZkscKvZu2F2w9LkwNBhj6xA==}
+    peerDependencies:
+      chart.js: ^3.5.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      chart.js: 3.9.1
+      react: 17.0.2
+    dev: false
+
   /react-dom/17.0.2_react@17.0.2:
     resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
     peerDependencies:
@@ -2017,6 +2037,15 @@ packages:
       object-assign: 4.1.1
       react: 17.0.2
       scheduler: 0.20.2
+    dev: false
+
+  /react-loading/2.0.3_react@17.0.2:
+    resolution: {integrity: sha512-Vdqy79zq+bpeWJqC+xjltUjuGApyoItPgL0vgVfcJHhqwU7bAMKzysfGW/ADu6i0z0JiOCRJjo+IkFNkRNbA3A==}
+    peerDependencies:
+      prop-types: ^15.6.0
+      react: '>=0.14.0'
+    dependencies:
+      react: 17.0.2
     dev: false
 
   /react-refresh/0.8.3:

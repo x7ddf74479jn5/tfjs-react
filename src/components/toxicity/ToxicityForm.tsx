@@ -1,6 +1,8 @@
 import React, { FC, useState } from "react";
 import * as toxicity from "@tensorflow-models/toxicity";
 
+import { PieChartSection } from "./PieChartSection";
+import { Loading } from "./Loading";
 import type { Predictions } from "../../types";
 
 export const ToxicityForm: FC = () => {
@@ -15,19 +17,16 @@ export const ToxicityForm: FC = () => {
     e.preventDefault();
     const threshold = 0.5;
     const toxicityLabels = [
-      "identity_attack", // 名指しの攻撃
-      "insult", // 侮辱
-      "obscene", // 猥褻
-      "severe_toxicity", // 極端に有害
-      "sexual_explicit", // あからさまに性的な表現
-      "threat", // 脅迫
-      "toxicity", // 有害
+      "identity_attack",
+      "insult",
+      "obscene",
+      "severe_toxicity",
+      "sexual_explicit",
+      "threat",
+      "toxicity",
     ];
-    // load()はネットワーク経由で実際のモデルファイルをダウンロードする
-    toxicity.load(threshold, toxicityLabels).then((model) => {
-      // 彼女は石器人みたいだ。知性はそれ以下だけど！
-      // She looks like a cavewoman, only far less intelligent!
 
+    toxicity.load(threshold, toxicityLabels).then((model) => {
       const sentences = [message];
 
       model.classify(sentences).then((predictions) => {
@@ -52,6 +51,7 @@ export const ToxicityForm: FC = () => {
         <br />
         <button type="submit">submit</button>
       </form>
+      {isWait ? <Loading /> : <PieChartSection results={results} />}
     </div>
   );
 };
