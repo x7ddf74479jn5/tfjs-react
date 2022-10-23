@@ -1,7 +1,6 @@
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { Toxicity } from "./components/toxicity/Toxicity";
-// import { RecommendationEngine } from './components/tensor/RecommendationEngine'
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
         </a>
       </div>
       <Toxicity />
-      {/* <RecommendationEngine /> */}
     </div>
   );
 }
